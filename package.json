@@ -1,0 +1,36 @@
+{
+  "name": "gameo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify src/client/main.js -o src/public/app.js",
+    "build": "browserify src/client/main.js  -o src/public/app.js",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarusified/gameo.git"
+  },
+  "keywords": [
+    "games",
+    "canvas",
+    "matterjs",
+    "node-canvas"
+  ],
+  "author": "jarus, rod,sleepercell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarusified/gameo/issues"
+  },
+  "homepage": "https://github.com/jarusified/gameo",
+  "dependencies": {
+    "browserify": "^10.1.3",
+    "mysql": "git://github.com/felixge/node-mysql"
+  },
+  "devDependencies": {
+    "nodemon": "^1.3.7",
+    "watchify": "^3.2.1"
+  }
+}

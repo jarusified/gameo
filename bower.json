@@ -1,0 +1,35 @@
+{
+  "name": "gameo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jarusified/gameo",
+  "authors": [
+    "jarus",
+    "rod",
+    "sleepercell"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "games",
+    "web-canvas",
+    "canvas"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "matter-js": "~0.8.0-alpha",
+    "sketch.js-2": "*",
+    "ocanvas.min": "http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.7.3/ocanvas.min.js"
+  }
+}
