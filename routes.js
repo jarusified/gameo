@@ -2,6 +2,9 @@ function init(app){
   app.get('/',function(req,res){
     res.render('app');
   });
+  app.post('/home',function(req,res){
+    res.redirect('/'+req.params.name);
+  });
   app.get('/:name',function(req,res){
     var idnew = 0;
     var Users = require('./src/static/schema.js').Users;
@@ -25,6 +28,7 @@ function init(app){
     });
     res.render('app');
   });
+
 }
 
 module.exports.init=init;
