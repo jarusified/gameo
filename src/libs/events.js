@@ -9,7 +9,7 @@ toolbox.on("click", function(event){
 	    options = {};
 	for(i=0; i<tags.length; i++)
 	    options[tags[i].parentNode.id] = tags[i].value;
-	studio_engine.addBody();
+	studio_engine.addBody(options);
 	studio_engine.runEngine();
     }
 });

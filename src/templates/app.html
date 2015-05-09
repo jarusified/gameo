@@ -5,33 +5,33 @@
   <div id="body" class="section">
     <div class="tool" id="size">
       <div class="tag">Size</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="150" step='5'>
     </div>
     <div class="tool" id="sides">
       <div class="tag">Sides</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="8" step='1'>
     </div>
     <div class="tool" id="density">
       <div class="tag">Density</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="0.01" step='0.001'>
     </div>
     <div class="tool" id="friction">
       <div class="tag">Friction</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="1" step='0.05'>
     </div>
     <div class="tool" id="frictionAir">
       <div class="tag">Friction Air</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="0.1" step='0.01'>
     </div>
     <div class="tool" id="chamfer">
       <div class="tag">Chamfer</div>
-      <input class='input-range' type="range">
+      <input class='input-range' type="range" min="0" max="30" step='2'>
     </div>
     <button id="addBody">Add body</button>
   </div>
-  <div id="resize" class="section">Resize</div>
-  <div id="rotate" class="section">Rotate</div>
-  <div id="delete" class="section">Delete</div>
+  <div class="section"><button id="resize">Resize</button></div>
+  <div class="section"><button id="rotate">Rotate</button></div>
+  <div class="section"><button id="delete">Delete</button></div>
 </div>
 <style>
 #toggle{
