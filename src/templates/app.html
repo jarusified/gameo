@@ -1,4 +1,37 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1> HI </h1>
+  <link rel="stylesheet" type="text/css" href="/src/static/css/main.css"/>
+  <div id="tool-div">
+  	<div id="body" class="section">
+  		<div class="tool" id="size">
+  			<div class="tag">Size</div>
+  			<input type="range">
+  		</div>
+  		<div class="tool" id="sides">
+  			<div class="tag">Sides</div>
+  			<input type="range">
+  		</div>
+  		<div class="tool" id="density">
+  			<div class="tag">Density</div>
+  			<input type="range">
+  		</div>
+  		<div class="tool" id="friction">
+  			<div class="tag">Friction</div>
+  			<input type="range">
+  		</div>
+  		<div class="tool" id="frictionAir">
+  			<div class="tag">Friction Air</div>
+  			<input type="range">
+  		</div>
+  		<div class="tool" id="chamfer">
+  			<div class="tag">Chamfer</div>
+  			<input type="range">
+  		</div>
+  		<button id="addBody">Add body</button>
+  	</div>
+  	<div id="resize" class="section">Resize</div>
+  	<div id="rotate" class="section">Rotate</div>
+  	<div id="delete" class="section">Delete</div>
+  </div>
+  <canvas id="studio"></canvas>
 {% endblock %}
