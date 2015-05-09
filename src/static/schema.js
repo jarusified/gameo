@@ -2,7 +2,7 @@ var exports = module.exports;
 var mongoose = require("mongoose");
 var usersSchema = new mongoose.Schema({
   id : { type : Number},
-  name : { type : String},
+  name : { type : String, unique : true},
 });
 var gamesSchema = new mongoose.Schema({
   id : { type : Number},
