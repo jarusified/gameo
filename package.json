@@ -27,7 +27,7 @@
   "dependencies": {
     "browserify": "^10.1.3",
     "http-server": "^0.8.0",
-    "mysql": "git://github.com/felixge/node-mysql",
+    "mongoose": "~4.0.2",
     "swig": "^1.4.2"
   },
   "devDependencies": {
