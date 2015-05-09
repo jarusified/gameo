@@ -23,13 +23,19 @@ var controlsSchema = new mongoose.Schema({
   game_id : { type : Number},
   controls : { type : mongoose.Schema.Types.Mixed}
 });
+var imageSchema = new mongoose.Schema({
+  base64 : {type : String},
+  user : {type : String}
+});
 var Users = mongoose.model("Users", usersSchema),
     Games = mongoose.model("Games", gamesSchema),
     Globals = mongoose.model("Globals", globalsSchema),
     Objects = mongoose.model("Objects", objectsSchema),
-    Controls = mongoose.model("Controls", controlsSchema);
+    Controls = mongoose.model("Controls", controlsSchema),
+    Images = mongoose.model("Images",imageSchema);
 exports.Users = Users;
 exports.Games = Games;
 exports.Globals = Globals;
 exports.Objects = Objects;
 exports.Controls = Controls;
+exports.Images = Images;
