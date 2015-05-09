@@ -1,13 +1,19 @@
-var TOOLBOX = $('#tool-div .section');
+var studio_engine = require("./engine.js");
 
+var toolbox = $('#tool-div .section');
 /* User Events */
-TOOLBOX.on("click", function(event){
-    var target = event.target;
-    console.log(target.type);
-    if(target.className == 'section'){
-	console.log('AAA');
+toolbox.on("click", function(event){
+    var target = event.target;    
+    if(target.id == 'addBody'){
+	var tags = $('.input-range'),
+	    options = {};
+	for(i=0; i<tags.length; i++)
+	    options[tags[i].parentNode.id] = tags[i].value;
+	studio_engine.addBody(options);
+	studio_engine.runEngine();
     }
 });
+
 module.exports.runner = function(n){
   return n;
 }
