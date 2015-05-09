@@ -4,38 +4,44 @@
 var ENGINE = Matter.Engine,
     WORLD = Matter.World,
     BODY = Matter.Body,
-    BODIES = Matter.Bodies;
+    BODIES = Matter.Bodies,
+    engine,
+    MouseConstraint = Matter.MouseConstraint;
+
 // Canvas Editor Studio
-var STUDIO = document.getElementById('studio'),
-    engine = ENGINE.create(STUDIO);
-
-
+    
 /* Common Matter.js Functionalities */
-function addBody(options){
-    console.log(options);
-//    var polygon = BODIES.polygon(100, 200, options['sides'], options['radius'], options['size']);
-    var polygon = BODIES.polygon(100, 200, 5, 10, { isStatic: true, render: { lineWidth: 5, strokeStyle: '#000000'} });
-    console.log(BODY);
-    //BODY.setVelocity(polygon, {x:0, y:0});
-    console.log(polygon, engine, engine.world);
+
+module.exports.addBody = function (){
+    var polygon = BODIES.polygon(100, 200, 5, 100, { render: { lineWidth: 5, strokeStyle: '#ffffff'} });
     WORLD.addBody(engine.world, polygon);
-}
+};
 
-function runEngine(){
-    console.log(engine);
+module.exports.runEngine = function (){
     ENGINE.run(engine);
-    console.log(engine);
     Matter.Render.world(engine)
+};
+
+
+module.exports.init = function(){
+    var STUDIO = document.getElementById('studio'),
+    opt = {
+            positionIterations: 6,
+            velocityIterations: 4,
+            enableSleeping: false
+    };
+    engine = ENGINE.create(STUDIO);
+    var mouse_constraint = MouseConstraint.create(engine);
+    WORLD.add(engine.world,mouse_constraint);
+    ENGINE.run(engine);
 }
 
-module.exports.addBody = addBody;
-module.exports.runEngine = runEngine;
 module.exports.globals = function(){
     return {
-	engine : ENGINE,
-	world : WORLD,
-	body : BODY,
-	bodies : BODIES,
-	studio : STUDIO
+    engine : ENGINE,
+    world : WORLD,
+    body : BODY,
+    bodies : BODIES,
+    studio : STUDIO
     }
 }
