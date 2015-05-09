@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify src/client/main.js -o src/public/app.js",
-    "build": "browserify src/client/main.js  -o src/public/app.js",
-    "start": "npm run watch & nodemon index.js"
+    "build": "browserify -x src/libs/*.js  > src/static/local.js",
+    "start": "npm run build & nodemon index.js"
   },
   "repository": {
     "type": "git",
