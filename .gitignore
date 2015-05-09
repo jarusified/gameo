@@ -4,3 +4,4 @@ bower_components
 *.swp
 \#'\#
 *~
+src/static/npm-debug.log
