@@ -23,7 +23,6 @@ schema.Globals.find({},function(err,data){
   if(err){
     return handleError(err);
   }
-  console.log(data);
 });
 routes.init(app);
 
