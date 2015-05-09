@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watchify src/client/main.js -o src/public/app.js",
     "build": "browserify src/client/main.js  -o src/public/app.js",
-    "start": "npm run watch & nodemon server.js"
+    "start": "npm run watch & nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
   "homepage": "https://github.com/jarusified/gameo",
   "dependencies": {
     "browserify": "^10.1.3",
-    "mysql": "git://github.com/felixge/node-mysql"
+    "http-server": "^0.8.0",
+    "mysql": "git://github.com/felixge/node-mysql",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "nodemon": "^1.3.7",
