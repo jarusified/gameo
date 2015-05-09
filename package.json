@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify src/libs/common.js  > src/static/local.js",
-    "start": "npm run build & nodemon index.js src/templates/app.html"
+    "start": "npm run build & nodemon index.js src/templates/*.html src/libs/*.js"
   },
   "repository": {
     "type": "git",
