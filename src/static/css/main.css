@@ -1,0 +1,46 @@
+@font-face{
+  font-family: Geosans;
+  src: url('../fonts/Geosans.ttf');  
+}
+
+html,body{
+	padding:0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(25, 29, 29, 0.91);
+}
+
+header{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	background-color: rgba(0, 143, 143, 0.76);
+}
+
+#studio{
+	left:5%;
+	top:20%;
+	width: 600px;
+	height:300px;
+	position: absolute;
+	margin-right: 50%;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+#tool-div{
+	position: absolute;
+	right:0;
+	width:20%;
+	height: 100%;
+	top:10%;
+	background-color: rgba(18, 55, 55, 0.96);
+}
+.section{
+	position: relative;
+}
+
+footer{
+
+}
