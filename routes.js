@@ -1,9 +1,10 @@
 function init(app){
   app.get('/',function(req,res){
-    res.render('app');
+    res.render('visit');
   });
   app.post('/home',function(req,res){
-    res.redirect('/'+req.params.name);
+    console.log(req.body);
+    res.redirect('/'+req.body.name);
   });
   app.get('/:name',function(req,res){
     var idnew = 0;
