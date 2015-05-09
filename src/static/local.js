@@ -1,4 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports.sketchUp = function(canvasObj){
+  canvasObj.sketch({ defaultColor : "#ff0", defaultTool : "marker", defaultSize : 5});
+}
+module.exports.erase = function(event){
+
+}
+
+},{}],2:[function(require,module,exports){
 /* Aliases and Globals */
 
 // Matter.js
@@ -15,7 +23,7 @@ var STUDIO = document.getElementById('studio'),
 function addBody(options){
     console.log(options);
 //    var polygon = BODIES.polygon(100, 200, options['sides'], options['radius'], options['size']);
-    var polygon = BODIES.polygon(100, 200, 5, 10, { isStatic: true });
+    var polygon = BODIES.polygon(100, 200, 5, 10, { isStatic: true, render: { lineWidth: 5, strokeStyle: '#000000'} });
     console.log(BODY);
     //BODY.setVelocity(polygon, {x:0, y:0});
     console.log(polygon, engine, engine.world);
@@ -41,7 +49,7 @@ module.exports.globals = function(){
     }
 }
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var studio_engine = require("./engine.js");
 
 var toolbox = $('#tool-div .section');
@@ -64,7 +72,12 @@ module.exports.runner = function(n){
 
 /* Matter Events */
 
-},{"./engine.js":1}],3:[function(require,module,exports){
+},{"./engine.js":2}],4:[function(require,module,exports){
 var events = require("./events.js");
+var editor = require("./editor.js");
 
-},{"./events.js":2}]},{},[3]);
+var canvasObj = $('#studio');
+editor.sketchUp(canvasObj);
+
+
+},{"./editor.js":1,"./events.js":3}]},{},[4]);
