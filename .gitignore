@@ -5,4 +5,5 @@ bower_components
 \#*\#
 *~
 src/static/npm-debug.log
+npm-debug.log
 src/static/local.js
