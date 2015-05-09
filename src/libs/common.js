@@ -1,14 +1,13 @@
-/* Aliases and Globals */
 var temp = require("./events.js");
 console.log(temp.runner(3));
+
+/* Aliases and Globals */
 // Matter.js
 var ENGINE = Matter.Engine,
     WORLD = Matter.World,
     BODIES = Matter.Bodies;
 // Canvas Editor Studio
-var STUDIO = document.getElementbyID('studio'),
-    TOOLBOX = document.getElementbyID('toolbox');
-
+var STUDIO = document.getElementById('studio');
 
 /* Common Matter.js Functionalities */
 function initEngine(){
